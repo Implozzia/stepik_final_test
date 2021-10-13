@@ -9,7 +9,7 @@ def test_guest_can_go_to_login_page(driver):
 
 
 def test_guest_should_see_login_link(driver):
-    link = "http://selenium1py.pythonanywhere.com/"
+    link = 'http://selenium1py.pythonanywhere.com/'
     page = MainPage(driver, link)
     page.open()
     page.should_be_login_link()
