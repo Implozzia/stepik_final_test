@@ -16,3 +16,11 @@ class ProductPage(BasePage):
         product_price = self.driver.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         product_price_in_alert = self.driver.find_element(*ProductPageLocators.PRODUCT_PRICE_IN_ALERT).text
         assert product_price == product_price_in_alert, 'Product price does not match'
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_SUCCESS_MESSAGE), \
+            'Success message is presented, but should not be'
+
+    def should_disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_SUCCESS_MESSAGE), \
+            'Success message should be disappeared'

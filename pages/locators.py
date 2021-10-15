@@ -16,4 +16,5 @@ class ProductPageLocators:
     PRODUCT_NAME_IN_ALERT = (By.CSS_SELECTOR, '.alert-success:first-child strong')
     PRODUCT_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
     PRODUCT_PRICE_IN_ALERT = (By.CSS_SELECTOR, '.alertinner p strong')
+    PRODUCT_SUCCESS_MESSAGE = (By.CSS_SELECTOR, '.alert-success:first-child')
 
